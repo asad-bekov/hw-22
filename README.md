@@ -83,10 +83,10 @@ resource "docker_container" "nginx" {
 ```
 
 *Ошибки до исправления:* 
-1. отсутствовало имя ресурса у `docker_image`, 
-2. имя контейнера начиналось с цифры, 
-3. использовался атрибут `image_id` вместо `name`, 
-4. опечатка в ссылке на `random_password`, 
+1. отсутствовало имя ресурса у `docker_image`; 
+2. имя контейнера начиналось с цифры `"1nginx"`;
+3. использовался атрибут `image_id` вместо `name`; 
+4. опечатка в ссылке на `random_password`; 
 5. дублирующий блок `ports`.
 
 ---
@@ -125,11 +125,11 @@ resource "docker_container" "nginx" {
 
    ![tofu init](https://github.com/asad-bekov/hw-22/raw/main/img/13.png)
 
-3. **`tofu apply` (0 added, 0 changed)** / `apply`  
+3. **`tofu apply`**
 
    ![tofu apply](https://github.com/asad-bekov/hw-22/raw/main/img/14.png)
    
-4. **`tofu destroy` (0 added, 0 changed)** / `destroy`  
+4. **`tofu destroy`**
 
    ![tofu destroy](https://github.com/asad-bekov/hw-22/raw/main/img/15.png)
 
